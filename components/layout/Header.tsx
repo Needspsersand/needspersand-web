@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 
@@ -8,7 +9,7 @@ const NAV = [
   { label: "About", href: "#about" },
   { label: "Vision & Strategy", href: "#vision" },
   { label: "What We Operate", href: "#operate" },
-  { label: "News & Press", href: "#news" },
+  { label: "News & Press", href: "/notice" },
   { label: "Timeline", href: "#timeline" },
 ];
 
@@ -25,18 +26,15 @@ export default function Header() {
     }
   };
 
+  const getNavHref = (href: string) =>
+    href.startsWith("#") ? (isMain ? href : `/${href}`) : href;
+
   const handleNavClick = (e: React.MouseEvent, href: string) => {
     setOpen(false);
-    if (!href.startsWith("#")) return;
-    const id = href.slice(1);
-    if (!isMain) {
-      window.location.href = `/${href}`;
-      return;
-    }
-    e.preventDefault();
-    const el = document.getElementById(id);
-    if (el) {
-      el.scrollIntoView({ behavior: "smooth", block: "start" });
+    if (href.startsWith("#") && isMain) {
+      e.preventDefault();
+      const el = document.getElementById(href.slice(1));
+      if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
     }
   };
 
@@ -90,14 +88,14 @@ export default function Header() {
         {/* Desktop nav: 1120px 이상에서만 보이기 */}
         <nav className="hidden items-center gap-14 text-[15px] text-neutral-800 min-[1120px]:flex">
           {NAV.map((item) => (
-            <a
+            <Link
               key={item.label}
-              href={item.href}
-              onClick={(e) => (isMain ? handleNavClick(e, item.href) : undefined)}
+              href={getNavHref(item.href)}
+              onClick={(e) => handleNavClick(e, item.href)}
               className="hover:opacity-70"
             >
               {item.label}
-            </a>
+            </Link>
           ))}
         </nav>
 
@@ -144,14 +142,14 @@ export default function Header() {
 
             <div className="mt-6 flex flex-col gap-4 text-[16px] text-neutral-900">
               {NAV.map((item) => (
-                <a
+                <Link
                   key={item.label}
-                  href={item.href}
+                  href={getNavHref(item.href)}
                   onClick={(e) => handleNavClick(e, item.href)}
                   className="rounded-lg px-2 py-2 hover:bg-black/5"
                 >
                   {item.label}
-                </a>
+                </Link>
               ))}
             </div>
           </div>

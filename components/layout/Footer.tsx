@@ -5,7 +5,7 @@ export default function Footer() {
   return (
     <footer className="relative border-t bg-neutral-50" style={{ borderTopWidth: 1, borderTopColor: "#DEDEDE" }}>
       <div className="mx-auto max-w-6xl px-6 py-12">
-        <div className="flex flex-col gap-8 min-[640px]:flex-row min-[640px]:items-center min-[640px]:justify-between">
+        <div>
           <Link href="/" className="flex items-center">
             <Image
               src="/images/logos/logo.svg"
@@ -15,18 +15,6 @@ export default function Footer() {
               className="grayscale"
             />
           </Link>
-
-          <nav className="flex flex-wrap items-center gap-6 text-sm text-neutral-600">
-            <Link href="#about" className="hover:text-neutral-900">
-              About
-            </Link>
-            <Link href="#contact" className="hover:text-neutral-900">
-              Contact
-            </Link>
-            <Link href="/notice" className="hover:text-neutral-900">
-              Notice
-            </Link>
-          </nav>
         </div>
 
         <div className="mt-8 border-t pt-8" style={{ borderTopWidth: 1, borderTopColor: "#DEDEDE" }}>
