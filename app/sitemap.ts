@@ -23,7 +23,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
   const postEntries: MetadataRoute.Sitemap = posts.map((p) => ({
     url: `${BASE}/notice/${p.id}`,
-    lastModified: new Date((p.published_at as string) || Date.now()),
+    lastModified: new Date(p.published_at || Date.now()),
     changeFrequency: "monthly",
     priority: 0.6,
   }));

@@ -11,7 +11,7 @@ export const revalidate = 3600;
 
 export async function generateStaticParams() {
   const posts = await fetchAllPostIds();
-  return posts.map((p) => ({ id: p.id as string }));
+  return posts.map((p) => ({ id: p.id }));
 }
 
 export async function generateMetadata({

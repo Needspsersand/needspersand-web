@@ -101,11 +101,13 @@ export async function fetchPostListFiltered(
   return { posts: data ?? [], total: count ?? 0 };
 }
 
-export async function fetchAllPostIds() {
+export type PostIdRow = { id: string; published_at: string | null };
+
+export async function fetchAllPostIds(): Promise<PostIdRow[]> {
   const { data } = await visibleQuery(
     supabase.from("posts").select("id, published_at")
   );
-  return data ?? [];
+  return (data as PostIdRow[] | null) ?? [];
 }
 
 export async function fetchPostById(id: string) {
