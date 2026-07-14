@@ -85,12 +85,12 @@ export default function SectionVision() {
               </div>
               <div className="flex-1">
                 <h3 className="text-lg font-bold text-neutral-800 md:text-xl">
-                  Integrated Token Architecture
+                  Technical Architecture
                 </h3>
                 <p className="mt-3 text-sm leading-6 text-neutral-600 md:text-base">
-                  서비스 흐름과 분리할 수 없는 구조를 기반으로,
+                  서비스 목적에 맞는 기술 구조를 설계하고,
                   <br />
-                  사용 과정 전반에 자연스럽게 연결된 토큰 시스템을 설계합니다.
+                  블록체인과 소프트웨어 기술을 결합해 확장 가능한 시스템을 구축합니다.
                 </p>
               </div>
             </div>

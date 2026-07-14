@@ -7,12 +7,12 @@ export const metadata: Metadata = {
     template: "%s | Needspersand",
   },
   description:
-    "니즈퍼샌드는 블록체인 기술을 기반으로 토마톡, TOTT 토큰, 스테이킹 기능 등 다양한 서비스를 개발·운영하는 기업입니다.",
+    "니즈퍼샌드는 블록체인 기술을 활용해 다양한 디지털 서비스를 개발·운영하는 기술 기업입니다.",
   metadataBase: new URL("https://needspersand.co.kr"),
   openGraph: {
     title: "Needspersand",
     description:
-      "토마톡 메신저와 TOTT 토큰 생태계를 운영하는 블록체인 기반 서비스 기업, 니즈퍼샌드 공식 홈페이지입니다.",
+      "블록체인 기술을 기반으로 실사용 서비스를 설계하고 운영하는 니즈퍼샌드 공식 홈페이지입니다.",
     url: "/",
     siteName: "니즈퍼샌드",
     images: [
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Needspersand",
     description:
-      "토마톡, TOTT 토큰, 스테이킹 기능을 개발·운영하는 블록체인 기반 서비스 기업.",
+      "블록체인 기술을 활용해 다양한 디지털 서비스를 개발·운영하는 기술 기업, 니즈퍼샌드.",
     images: ["/og-image.png"],
   },
 };

@@ -17,10 +17,10 @@ export default function SectionOperate() {
 
           <div className="md:col-span-8 flex items-start justify-end">
             <p className="max-w-xl text-sm leading-relaxed text-neutral-600 md:text-base">
-              니즈퍼샌드는 사용자 서비스, 토큰 유틸리티, 참여 프로그램이
-              명확한 운영 흐름으로 연결된 구조를 운영합니다.
+              니즈퍼샌드는 블록체인 기술을 활용해 커뮤니케이션, 온체인 인프라,
+              참여형 프로그램 등 다양한 서비스를 개발·운영합니다.
               <br />
-              각 구성 요소는 분리된 목적을 가지며 하나의 핵심 주제 아래 개발·운영됩니다.
+              각 서비스는 독립적인 목적을 가지며, 기술과 운영이 연결된 구조로 설계됩니다.
             </p>
           </div>
         </div>
@@ -93,7 +93,7 @@ export default function SectionOperate() {
             </div>
           </div>
 
-          {/* 카드 2 - 유틸리티 토큰 */}
+          {/* 카드 2 - 온체인 / 웹 인프라 */}
           <div className="text-center">
             <div className="relative aspect-square w-full">
               <div className="absolute left-1/2 top-1/2 w-[54%] -translate-x-1/2 -translate-y-1/2 aspect-square rounded-[200px] overflow-hidden md:w-[62%]">
@@ -126,17 +126,17 @@ export default function SectionOperate() {
 
             <div className="mx-auto max-w-[300px]">
               <h3 className="mt-0.5 text-2xl font-bold leading-tight text-[#333333] md:text-2xl md:font-semibold lg:text-3xl">
-                TOTT TOKEN
+                TOTT
               </h3>
               <p className="mt-4 text-sm font-normal leading-relaxed text-[#333333] md:text-base">
-                TOTT는 토마톡 서비스 운영을 지원하기 위해
+                TOTT는 서비스 운영을 뒷받침하는
                 <br />
-                설계된 유틸리티 토큰입니다.
+                온체인·웹 기반 인프라입니다.
               </p>
               <p className="mt-2 text-sm font-normal leading-relaxed text-[#666666] md:text-base">
-                온체인에 배포되어 있으며,
+                블록체인 기술을 적용해 구축되었으며,
                 <br />
-                서비스 구조 내에서 역할을 수행합니다.
+                서비스 구조 안에서 기술적 역할을 수행합니다.
               </p>
               <a
                 href="https://tott.co.kr"
@@ -149,7 +149,7 @@ export default function SectionOperate() {
             </div>
           </div>
 
-          {/* 카드 3 - 토큰 참여 프로그램 */}
+          {/* 카드 3 - 참여형 프로그램 */}
           <div className="text-center">
             <div className="relative aspect-square w-full">
               <div className="absolute left-1/2 top-1/2 w-[54%] -translate-x-1/2 -translate-y-1/2 aspect-square rounded-[200px] overflow-hidden md:w-[62%]">
@@ -182,17 +182,17 @@ export default function SectionOperate() {
 
             <div className="mx-auto max-w-[300px]">
               <h3 className="mt-0.5 text-2xl font-bold leading-tight text-[#333333] md:text-2xl md:font-semibold lg:text-3xl">
-                TOTT STAKING
+                On-chain Program
               </h3>
               <p className="mt-4 text-sm font-normal leading-relaxed text-[#333333] md:text-base">
-                스테이킹 프로그램은 TOTT 토큰을 기반으로 한
+                온체인 환경에서 동작하는
                 <br />
-                참여 메커니즘입니다.
+                참여형 프로그램을 운영합니다.
               </p>
               <p className="mt-2 text-sm font-normal leading-relaxed text-[#666666] md:text-base">
-                프로그램은 실제로 운영 중이며,
+                실제 운영 가능한 구조로 설계되어 있으며,
                 <br />
-                기능 수행 목적의 구조로 설계되었습니다.
+                기능 수행을 목적으로 개발되었습니다.
               </p>
               <a
                 href="https://tomatokfi.com"
@@ -200,7 +200,7 @@ export default function SectionOperate() {
                 rel="noopener noreferrer"
                 className="mt-4 inline-block text-[11.2px] font-normal text-[#333333] hover:opacity-70"
               >
-                스테이킹 바로가기 →
+                프로그램 바로가기 →
               </a>
             </div>
           </div>

@@ -22,7 +22,7 @@ export default function SectionGovernance() {
         {/* RIGHT: 한국어 설명 + 불릿 3개 */}
         <div className="md:w-2/3">
           <p className="text-sm leading-7 text-white md:text-base">
-            니즈퍼샌드는 서비스, 토큰 인프라 및 관련 프로그램의 기획·개발·운영에 대한
+            니즈퍼샌드는 디지털 서비스와 관련 기술의 기획·개발·운영에 대한
             단일 책임 주체입니다. 모든 공식 정보는 회사가 운영하는 지정된 채널을 통해
             제공됩니다.
           </p>
@@ -33,11 +33,11 @@ export default function SectionGovernance() {
             </li>
             <li className="flex gap-2 [&>span:first-child]:mt-[0.35em]">
               <span className="h-1.5 min-h-[6px] w-1.5 shrink-0 rounded-full bg-white" />
-              <span>사용자는 서비스 및 블록체인 기능을 본인의 판단 하에 이용합니다</span>
+              <span>사용자는 서비스 및 관련 기능을 본인의 판단 하에 이용합니다</span>
             </li>
             <li className="flex gap-2 [&>span:first-child]:mt-[0.35em]">
               <span className="h-1.5 min-h-[6px] w-1.5 shrink-0 rounded-full bg-white" />
-              <span>토큰 관련 정보는 정보 제공 목적에 한해 제공됩니다</span>
+              <span>기술·서비스 정보는 정보 제공 목적에 한해 제공됩니다</span>
             </li>
           </ul>
         </div>

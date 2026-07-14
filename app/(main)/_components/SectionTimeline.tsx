@@ -47,7 +47,7 @@ const TIMELINE_DATA: YearGroup[] = [
       {
         quarter: "Q4",
         title: "Tomatok 1.0 공개",
-        bullets: ["TOTT Token LBank 거래소 상장"],
+        bullets: ["서비스 1.0 공개 및 운영 시작"],
         link: "#",
       },
     ],
@@ -64,7 +64,7 @@ const TIMELINE_DATA: YearGroup[] = [
       {
         quarter: "Q1",
         title: "펑크비즘과 업무협약(MOU) 체결",
-        bullets: ["NFT 및 플랫폼 사업 협력"],
+        bullets: ["디지털 콘텐츠·플랫폼 사업 협력"],
         link: "#",
       },
       {
@@ -86,12 +86,12 @@ const TIMELINE_DATA: YearGroup[] = [
     events: [
       {
         quarter: "Q1",
-        title: "NFT 520개 발행",
+        title: "온체인 기반 디지털 에셋 프로젝트 진행",
         link: "#",
       },
       {
         quarter: "Q1",
-        title: "TOTT Token 3억 개 소각",
+        title: "서비스 인프라 고도화 및 운영 안정화",
         link: "#",
       },
     ],
