@@ -1,8 +1,21 @@
+import type { Metadata } from "next";
 import { Suspense } from "react";
 import { fetchPostListFiltered } from "@/lib/posts";
 import NoticeListClient from "./_components/NoticeListClient";
 
-export const dynamic = "force-dynamic";
+export const revalidate = 3600;
+
+export const metadata: Metadata = {
+  title: "Updates & Disclosures",
+  description:
+    "니즈퍼샌드 뉴스, 공지사항, 프로젝트 업데이트를 확인하세요.",
+  openGraph: {
+    title: "Updates & Disclosures | Needspersand",
+    description:
+      "니즈퍼샌드 뉴스, 공지사항, 프로젝트 업데이트를 확인하세요.",
+    url: "/notice",
+  },
+};
 
 type TabId = "all" | "news" | "project" | "notice";
 

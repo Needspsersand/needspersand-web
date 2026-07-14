@@ -1,8 +1,46 @@
+import type { Metadata } from "next";
 import Link from "next/link";
-import { supabase } from "@/lib/supabaseClient";
+import {
+  fetchAllPostIds,
+  fetchPostAttachments,
+  fetchPostById,
+} from "@/lib/posts";
 import NoticeActions from "./_components/NoticeActions";
 
-export const dynamic = "force-dynamic";
+export const revalidate = 3600;
+
+export async function generateStaticParams() {
+  const posts = await fetchAllPostIds();
+  return posts.map((p) => ({ id: p.id as string }));
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ id: string }>;
+}): Promise<Metadata> {
+  const { id } = await params;
+  const post = await fetchPostById(id);
+  if (!post) return { title: "글을 찾을 수 없어요" };
+
+  const description =
+    typeof post.content === "string"
+      ? post.content.replace(/\s+/g, " ").slice(0, 140)
+      : undefined;
+
+  return {
+    title: post.title,
+    description,
+    openGraph: {
+      title: post.title,
+      description,
+      url: `/notice/${id}`,
+      images: post.image_url
+        ? [{ url: post.image_url, alt: post.title }]
+        : undefined,
+    },
+  };
+}
 
 export default async function NoticeDetailPage({
   params,
@@ -10,19 +48,11 @@ export default async function NoticeDetailPage({
   params: Promise<{ id: string }>;
 }) {
   const { id } = await params;
-  const { data: post, error } = await supabase
-    .from("posts")
-    .select("*")
-    .eq("id", id)
-    .single();
+  const post = await fetchPostById(id);
 
-  if (error || !post) return <div className="p-8">글을 찾을 수 없어요.</div>;
+  if (!post) return <div className="p-8">글을 찾을 수 없어요.</div>;
 
-  const { data: files } = await supabase
-    .from("post_attachments")
-    .select("*")
-    .eq("post_id", id)
-    .order("created_at", { ascending: false });
+  const files = await fetchPostAttachments(id);
 
   return (
     <main className="mx-auto max-w-3xl px-6 py-12">
@@ -46,7 +76,7 @@ export default async function NoticeDetailPage({
         {post.content}
       </div>
 
-      {files && files.length > 0 && (
+      {files.length > 0 && (
         <div className="mt-10">
           <h2 className="mb-3 text-lg font-semibold">첨부파일</h2>
           <ul className="space-y-2">

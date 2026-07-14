@@ -2,7 +2,10 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Needspersand",
+  title: {
+    default: "Needspersand",
+    template: "%s | Needspersand",
+  },
   description:
     "니즈퍼샌드는 블록체인 기술을 기반으로 토마톡, TOTT 토큰, 스테이킹 기능 등 다양한 서비스를 개발·운영하는 기업입니다.",
   metadataBase: new URL("https://needspersand.co.kr"),

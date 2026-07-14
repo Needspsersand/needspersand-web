@@ -2,8 +2,6 @@ import Link from "next/link";
 import { fetchNewsCards, fetchNoticeHighlightOne } from "@/lib/posts";
 import NewsCarouselClient from "./NewsCarouselClient";
 
-export const dynamic = "force-dynamic";
-
 type NewsCard = {
   id: string;
   title: string;

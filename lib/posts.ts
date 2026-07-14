@@ -100,3 +100,29 @@ export async function fetchPostListFiltered(
   if (error) return { posts: [], total: 0 };
   return { posts: data ?? [], total: count ?? 0 };
 }
+
+export async function fetchAllPostIds() {
+  const { data } = await visibleQuery(
+    supabase.from("posts").select("id, published_at")
+  );
+  return data ?? [];
+}
+
+export async function fetchPostById(id: string) {
+  const { data, error } = await supabase
+    .from("posts")
+    .select("*")
+    .eq("id", id)
+    .single();
+  if (error || !data) return null;
+  return data;
+}
+
+export async function fetchPostAttachments(postId: string) {
+  const { data } = await supabase
+    .from("post_attachments")
+    .select("*")
+    .eq("post_id", postId)
+    .order("created_at", { ascending: false });
+  return data ?? [];
+}

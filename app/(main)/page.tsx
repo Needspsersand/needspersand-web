@@ -6,8 +6,8 @@ import SectionVision from "./_components/SectionVision";
 import UpdatesSection from "./_components/UpdatesSection";
 import ScrollToHash from "./_components/ScrollToHash";
 
-/** Vercel 캐시 비활성화: 뉴스 등록 후 메인에 바로 반영 */
-export const dynamic = "force-dynamic";
+/** 뉴스가 자주 바뀌지 않으므로 정적 캐시 (1시간마다 재생성) */
+export const revalidate = 3600;
 
 export default function Home() {
   return (
