@@ -1,6 +1,5 @@
 // app/_components/SectionOperate.tsx
 import Image from "next/image";
-import Link from "next/link";
 
 export default function SectionOperate() {
   return (
@@ -83,9 +82,14 @@ export default function SectionOperate() {
                 <br />
                 실제 사용자 대상 서비스로 운영 중입니다.
               </p>
-              <Link href="#" className="mt-4 inline-block text-[11.2px] font-normal text-[#333333] hover:opacity-70">
+              <a
+                href="https://tomatok.io"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-4 inline-block text-[11.2px] font-normal text-[#333333] hover:opacity-70"
+              >
                 토마톡 바로가기 →
-              </Link>
+              </a>
             </div>
           </div>
 
@@ -134,9 +138,14 @@ export default function SectionOperate() {
                 <br />
                 서비스 구조 내에서 역할을 수행합니다.
               </p>
-              <Link href="#" className="mt-4 inline-block text-[11.2px] font-normal text-[#333333] hover:opacity-70">
+              <a
+                href="https://tott.co.kr"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-4 inline-block text-[11.2px] font-normal text-[#333333] hover:opacity-70"
+              >
                 TOTT 바로가기 →
-              </Link>
+              </a>
             </div>
           </div>
 
@@ -185,9 +194,14 @@ export default function SectionOperate() {
                 <br />
                 기능 수행 목적의 구조로 설계되었습니다.
               </p>
-              <Link href="#" className="mt-4 inline-block text-[11.2px] font-normal text-[#333333] hover:opacity-70">
+              <a
+                href="https://tomatokfi.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-4 inline-block text-[11.2px] font-normal text-[#333333] hover:opacity-70"
+              >
                 스테이킹 바로가기 →
-              </Link>
+              </a>
             </div>
           </div>
         </div>
